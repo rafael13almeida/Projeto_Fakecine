@@ -11,6 +11,7 @@ $sql = "CREATE TABLE filmes (
         id INTEGER PRIMARY KEY AUTOINCREMENT, 
         titulo VARCHAR (200) NOT NULL,
         poster VARCHAR (200),
+        sinopse TEXT(500),
         nota DECIMAL(2,1)
         )
 ";
@@ -20,10 +21,10 @@ else
     echo "\nErro ao criar tabela filmes\n";
 
 //inserindo filmes
-$sql = "INSERT INTO filmes (id, titulo, poster, nota) VALUES (
-    0,
+$sql = "INSERT INTO filmes (titulo, poster, sinopse, nota) VALUES (
     'Encanto',
     'https://www.themoviedb.org/t/p/w300/zAC6fCnaOHMpPFpOpngTSmTDnLK.jpg',
+    'bla bla bla',
     9.7
 )";
 
@@ -32,10 +33,10 @@ echo "\nFilmes inseridos com sucesso\n";
 else
 echo "\nErro ao inserir filmes\n";
 
-$sql = "INSERT INTO filmes (id, titulo, poster, nota) VALUES (
-    1,
+$sql = "INSERT INTO filmes (titulo, poster, sinopse, nota) VALUES (
     'Sing 2',
     'https://www.themoviedb.org/t/p/w300/g0UPcVwhRtlLhNRowM324o7UJ1f.jpg',
+    'bla ble bli',
     9.3
 )";
 
@@ -43,7 +44,7 @@ $sql = "INSERT INTO filmes (id, titulo, poster, nota) VALUES (
 if ($bd->exec($sql))
 echo "\nFilmes inseridos com sucesso\n";
 else
-echo "\nErro ao inserir filmes\n";
+echo "\nErro ao inserir filmes\n".$bd->lastErrorMsg();
 
 
 
