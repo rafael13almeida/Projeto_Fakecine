@@ -1,0 +1,19 @@
+body {
+    background-color: #e5e5e5;
+}
+
+.nav-extended {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5dQELBJRv9MQqJPNnVZn_76RyyBZ3q7rtng&usqp=CAU");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+}
+
+nav ul li.active, .tab a.active  {
+    border-bottom: solid 2px #fff;
+    background-color: transparent;
+}
+
+.nav-header h1 {
+    text-shadow: 2px 2px 8px #000000;
+}
