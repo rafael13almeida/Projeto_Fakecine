@@ -1,4 +1,30 @@
-<?php include "cabecalho.php"?>
+<?php include "cabecalho.php" ?>
+
+<?php
+
+$filme1 = [
+    "titulo" => "Encanto",
+    "nota" => 9.8,
+    "poster" => "https://www.themoviedb.org/t/p/w300/zAC6fCnaOHMpPFpOpngTSmTDnLK.jpg"
+];
+$filme2 = [
+    "titulo" => "Sing 2",
+    "nota" => 9.1,
+    "poster" => "https://www.themoviedb.org/t/p/w300/g0UPcVwhRtlLhNRowM324o7UJ1f.jpg"
+];
+$filme3 = [
+    "titulo" => "O Rei Leão",
+    "nota" => 9.9,
+    "poster" => "https://www.themoviedb.org/t/p/w300/lBhAvhY1Wk36qICfrizBbat7MkP.jpg"
+];
+$filme4 = [
+    "titulo" => "Raya e a última Codorna",
+    "nota" => 9.3,
+    "poster" => "https://www.themoviedb.org/t/p/w300/nFuxY9pebpnkXaZ2H06qX68eIEy.jpg"
+];
+
+$filmes = [$filme1, $filme2, $filme3, $filme4];
+?>
 
 <body>
     <nav class="nav-extended blue-grey lighten-3">
@@ -20,62 +46,23 @@
         </div>
     </nav>
     <div class="row">
-        <div class="col s3">
-            <div class="card hoverable">
-                <div class="card-image">
-                    <img src="https://www.themoviedb.org/t/p/w300/zAC6fCnaOHMpPFpOpngTSmTDnLK.jpg">
-                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
-                </div>
-                <div class="card-content">
-                    <p class="valign-wrapper">
-                        <i class="material-icons amber-text">star</i> 9.8
-                    </p>
-                    <span class="card-title ">Encanto</span>
-                </div>
-            </div>
-        </div>
-        <div class="col s3">
-            <div class="card hoverable">
-                <div class="card-image">
-                    <img src="https://www.themoviedb.org/t/p/w300/g0UPcVwhRtlLhNRowM324o7UJ1f.jpg">
-                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
-                </div>
-                <div class="card-content">
-                    <p class="valign-wrapper">
-                        <i class="material-icons amber-text">star</i> 9.3
-                    </p>
-                    <span class="card-title ">Sing 2</span>
+        <!-- Filme !-->
+        <?php foreach ($filmes as $filme) : ?>
+            <div class="col s3">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="<?php echo $filme["poster"]; ?>">
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p class="valign-wrapper">
+                            <i class="material-icons amber-text">star</i> <?php echo $filme["nota"]; ?>
+                        </p>
+                        <span class="card-title "><?php echo $filme["titulo"]; ?></span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col s3">
-            <div class="card hoverable">
-                <div class="card-image">
-                    <img src="https://www.themoviedb.org/t/p/w300/lBhAvhY1Wk36qICfrizBbat7MkP.jpg">
-                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
-                </div>
-                <div class="card-content">
-                    <p class="valign-wrapper">
-                        <i class="material-icons amber-text">star</i> 9.9
-                    </p>
-                    <span class="card-title ">O Rei Leão</span>
-                </div>
-            </div>
-        </div>
-        <div class="col s3">
-            <div class="card hoverable">
-                <div class="card-image">
-                    <img src="https://www.themoviedb.org/t/p/w300/nFuxY9pebpnkXaZ2H06qX68eIEy.jpg">
-                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
-                </div>
-                <div class="card-content">
-                    <p class="valign-wrapper">
-                        <i class="material-icons amber-text">star</i> 8.9
-                    </p>
-                    <span class="card-title ">Raya</span>
-                </div>
-            </div>
-        </div>
+        <?php endforeach ?>
     </div>
 </body>
 
