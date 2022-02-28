@@ -5,8 +5,8 @@
   <nav class="nav-extended blue-grey lighten-3">
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="right">
-        <li><a href="galeria.php">Galeria</a></li>
-        <li><a href="cadastrar.php">Cadastrar</a></li>
+        <li><a href="/">Galeria</a></li>
+        <li class="active"><a href="/novo">Cadastrar</a></li>
       </ul>
     </div>
     <div class="nav-header center">
@@ -22,7 +22,7 @@
   </nav>
   <!-- Formulário !-->
   <div class="row">
-    <form action="inserirFilme.php" method="POST">
+    <form method="POST">
       <div class="col s6 offset-s3">
         <div class="card">
           <div class="card-content">
@@ -63,7 +63,7 @@
           </div>
           <div class="card-action">
             <!--botoes!-->
-            <a href="galeria.php" class="waves-effect waves-light btn grey">Cancelar</a>
+            <a href="/" class="waves-effect waves-light btn grey">Cancelar</a>
             <button type="submit" class="waves-effect waves-light btn blue-grey darken-3">Cadastrar</button>
           </div>
         </div>
