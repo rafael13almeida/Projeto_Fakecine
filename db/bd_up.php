@@ -21,24 +21,7 @@ else
     echo "\nErro ao criar tabela filmes\n";
 
 //inserindo filmes
-$sql = "INSERT INTO filmes (titulo, poster, sinopse, nota) VALUES (
-    'Encanto',
-    'https://www.themoviedb.org/t/p/w300/zAC6fCnaOHMpPFpOpngTSmTDnLK.jpg',
-    'bla bla bla',
-    9.7
-)";
 
-if ($bd->exec($sql))
-echo "\nFilmes inseridos com sucesso\n";
-else
-echo "\nErro ao inserir filmes\n";
-
-$sql = "INSERT INTO filmes (titulo, poster, sinopse, nota) VALUES (
-    'Sing 2',
-    'https://www.themoviedb.org/t/p/w300/g0UPcVwhRtlLhNRowM324o7UJ1f.jpg',
-    'bla ble bli',
-    9.3
-)";
 
 
 if ($bd->exec($sql))
