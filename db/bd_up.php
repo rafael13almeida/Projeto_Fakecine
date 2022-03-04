@@ -20,9 +20,6 @@ if ($bd->exec($sql))
 else
     echo "\nErro ao criar tabela filmes\n";
 
-//inserindo filmes
-
-
 
 if ($bd->exec($sql))
 echo "\nFilmes inseridos com sucesso\n";
